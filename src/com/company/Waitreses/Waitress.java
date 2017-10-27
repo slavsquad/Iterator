@@ -8,13 +8,14 @@ import com.company.Menu.MenuItem;
 public class Waitress {
     Menu menu;
 
+
     public Waitress(Menu menu) {
         this.menu = menu;
     }
 
     public void printMenu() {
         Iterator menuIterator = menu.createIterator();
-        System.out.println("\n--------MENU----------");
+        System.out.println("\n--------"+menu.getName()+"----------");
         while (menuIterator.hasNext()) {
             MenuItem menuItem = menuIterator.next();
             System.out.print(menuItem.getName() + ", ");
@@ -30,7 +31,7 @@ public class Waitress {
     public void printVegetarianMenu() {
 
         Iterator menuIterator = menu.createIterator();
-        System.out.println("\n--------Vegetaria MENU----------");
+        System.out.println("\n--------Vegetaria "+menu.getName()+"----------");
         while (menuIterator.hasNext()) {
             MenuItem menuItem = menuIterator.next();
             if (menuItem.isVegetarian()) {

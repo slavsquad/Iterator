@@ -5,10 +5,12 @@ import com.company.Iterators.Iterator;
 
 public class DinerMenu implements Menu {
     static final int MAX_ITEMS = 6;
+    private String name;
     int numberOfItems = 0;
     MenuItem[] menuItems;
 
-    public DinerMenu() {
+    public DinerMenu(String name) {
+        this.name = name;
         menuItems = new MenuItem[MAX_ITEMS];
 
         addItem("Vegetarian BLT",
@@ -48,6 +50,11 @@ public class DinerMenu implements Menu {
         // To test Alternating menu items, comment out above line,
         // and uncomment the line below.
         //return new AlternatingDinerMenuIterator(menuItems);
+    }
+
+    @Override
+    public String getName() {
+        return name;
     }
 
     // other menu methods here

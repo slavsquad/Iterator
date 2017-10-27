@@ -7,8 +7,8 @@ import com.company.Waitreses.Waitress;
 public class Main {
 
     public static void main(String[] args) {
-        PancakeHouseMenu pancakeHouseMenu = new PancakeHouseMenu();
-        DinerMenu dinerMenu = new DinerMenu();
+        PancakeHouseMenu pancakeHouseMenu = new PancakeHouseMenu("Pancake House Menu 27/10/17");
+        DinerMenu dinerMenu = new DinerMenu("Diner Menu 27/10/17");
 
         Waitress waitress = new Waitress(pancakeHouseMenu);
         waitress.printMenu();
